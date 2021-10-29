@@ -1,0 +1,34 @@
+div {
+  width: 200px; /* Ширина блока */
+  margin: 10px; /* Поля  вокруг элемента */
+  float: left; /* Обтекание по правому краю */
+}
+p {
+    font-weight: 600; /* Жирное начертание */
+    line-height: 1.2; /* Межстрочный интервал */
+   }
+
+H2.sic {
+    font-size: 140%; /* Размер шрифта */
+    color: maroon; /* Цвет текста */
+    font-weight: normal; /* Нормальное начертание текста */
+    margin-left: 30px; /* Отступ слева */
+    margin-bottom: 0px; /* Отступ снизу */
+   }
+
+H2.sic + P {
+   background: #ddd; /* Цвет фона */
+   margin-left: 30px; /* Отступ слева */
+   margin-top: 0.5em; /* Отступ сверху */
+   padding: 7px; /* Поля вокруг текста */
+  }
+
+.menu { 
+    padding: 7px; /* Поля вокруг текста */
+    border: 1px solid #333; /* Параметры рамки */
+    background: #fc0; /* Цвет фона */
+   }
+ P {
+    color: green; /* Зеленый цвет текста */
+    font-style: italic; /* Курсивное начертание текста */
+   }

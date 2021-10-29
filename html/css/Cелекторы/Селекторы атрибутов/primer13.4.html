@@ -1,0 +1,29 @@
+<!--“аким способом можно автоматически раздел€ть стиль дл€ ссылок на сайты домена ru и дл€ ссылок на сайты других доменов вроде com, 
+как показано в примере 13.4.
+
+—тиль дл€ разных доменов
+-->
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>—електоры атрибутов</title>
+  <style>
+   A[href$=".ru"] { /* ≈сли ссылка заканчиваетс€ на .ru */
+    background: url(images/ru.png) no-repeat 0 6px; /* ƒобавл€ем фоновый рисунок */ 
+    padding-left: 12px; /* —мещаем текст вправо */ 
+   } 
+   A[href$=".com"] { /* ≈сли ссылка заканчиваетс€ на .com */
+    background: url(images/com.png) no-repeat 0 6px; 
+    padding-left: 12px;
+   }
+  </style>
+ </head>
+ <body>
+  
+  <p><a href="http://www.yandex.com">Yandex.Com</a> | 
+     <a href="http://www.yandex.ru">Yandex.Ru</a></p>
+  
+ </body>
+</html>

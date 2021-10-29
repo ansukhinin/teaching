@@ -1,0 +1,96 @@
+Стилизация полей ввода
+Используйте свойство width для определения ширины поля ввода:
+input {
+    width: 100%;
+}
+
+Приведенный выше пример применяется ко всем элементам <input>. Если требуется только стиль определенного типа ввода, можно использовать селекторы атрибутов:
+
+input[type=text] - выберет только текстовые поля
+input[type=password] - будет только выбрать поля пароля
+input[type=number] - выберет только числовые поля
+
+
+Используйте свойство padding для добавления пространства внутри текстового поля.
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+Обратите внимание, что мы установили свойство box-sizing в border-box. 
+Это гарантирует, что заполнение и в конечном итоге границы включаются в общую ширину и высоту элементов.
+
+Используйте свойство border для изменения размера и цвета границы и используйте свойство border-radius для добавления скругленных углов:
+input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+Если требуется только нижняя граница, используйте свойство border-bottom:
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+
+Используйте свойство background-color, чтобы добавить цвет фона для входных данных и свойство color для изменения цвета текста:
+input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+}
+
+
+Сфокусированные входы
+По умолчанию некоторые обозреватели будут добавлять синие контуры вокруг ввода, 
+когда он получает фокус (нажал на). Это поведение можно удалить, добавив outline: none; к входным данным.
+
+Используйте селектор :focus, чтобы сделать что-то с полем ввода, когда он получает фокус:
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+
+
+Вход со значком/изображением
+Если требуется значок внутри входных данных, используйте свойство background-image и поместите его со свойством background-position. Также обратите внимание, что мы добавляем большое левое заполнение, чтобы зарезервировать пространство значка:
+
+input[type=text] {
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+Анимированный поисковый ввод
+В этом примере мы используем свойство CSS transition для анимации ширины ввода поиска, когда он получает фокус.
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+
+Стилизация текстового
+Совет: Используйте свойство resize для предотвращения изменения размера текстового объекта (отключите «захват» в правом нижнем углу):
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+
+
