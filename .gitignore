@@ -1,3 +1,4 @@
 *.txt
 flask/flask_app/env/
+python/flask_app/env/
 
